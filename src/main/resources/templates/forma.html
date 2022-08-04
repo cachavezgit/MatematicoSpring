@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="#" th:action="@{./sumaNumeros}" method="post" th:object="${matematico}" >
+            <div class="form-group">
+                <label for="num1">Numero 1:</label>
+                <input type="number" class="form-control" id="num1" th:field="*{num1}" >
+            </div>
+            <div class="form-group">
+                <label for="num2">Numero 2:</label>
+                <input type="number" class="form-control" id="num2" th:field="*{num2}" >
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
